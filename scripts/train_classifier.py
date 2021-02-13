@@ -1,6 +1,3 @@
-#    - To run ML pipeline that trains classifier and saves
-#        `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
-
 import sys
 import pandas as pd
 import numpy as np
@@ -97,6 +94,9 @@ def save_model(model, model_filepath):
 
 
 def main():
+#     To run ML pipeline that trains classifier and saves
+#     `python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl`
+
     if len(sys.argv) == 3:
         database_filepath, model_filepath = sys.argv[1:]
         print('Loading data...\n    DATABASE: {}'.format(database_filepath))

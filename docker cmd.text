@@ -1,0 +1,8 @@
+docker ps -a
+docker run -d -P disaster-message
+docker build -t disaster-message .
+docker container prune
+curl 127.0.0.1:49158
+docker stop 50d65cc6ecdd 
+docker tag disaster-message-flask disastermessage.azurecr.io/disaster-message-flask
+docker push disastermessage.azurecr.io/disaster-message-flask

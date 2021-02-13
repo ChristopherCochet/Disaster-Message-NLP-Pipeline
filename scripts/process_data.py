@@ -1,9 +1,3 @@
-# Run the following commands in the project's root directory to set up your database and model.
-
-#   - To run ETL pipeline that cleans data and stores in database
-#        `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
-
-
 import sys
 import pandas as pd
 from sqlalchemy import create_engine
@@ -52,6 +46,8 @@ def save_data(df, database_filename):
 
 
 def main():
+#   To run ETL pipeline that cleans data and stores in database
+#       `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`    
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]

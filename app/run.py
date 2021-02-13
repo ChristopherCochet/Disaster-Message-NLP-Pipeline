@@ -12,6 +12,9 @@ from plotly.graph_objs import Bar
 from sqlalchemy import create_engine
 
 
+model_file_name = "classifier.pkl"
+db_name = "DisasterResponse.db"
+
 app = Flask(__name__)
 
 def tokenize(text):
@@ -26,11 +29,11 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/disaster-message.db')
+engine = create_engine('sqlite:///data/DisasterResponse.db')
 df = pd.read_sql_table('messages', engine)
 
 # load model
-model = pickle.load(open("../models/nlp_pipeline_simple_gb.pkl", 'rb'))
+model = pickle.load(open("models/"+model_file_name, 'rb'))
 #joblib.load("../models/nlp_pipeline_simple_gb.pkl")
 
 
@@ -104,7 +107,7 @@ def go():
 
 
 def main():
-    app.run(host='127.0.0.1', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=3001, debug=True)
 
 
 if __name__ == '__main__':
