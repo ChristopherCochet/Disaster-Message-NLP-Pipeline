@@ -42,6 +42,10 @@ In the script directory, the 'process_data.py' file perfoms the data cleaning pi
 <kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
 Refer to the following ML classifier training and tuning notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
 
+Multiple NPL pipelines were tested with the best results using a lightGBM clissification model. 
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/model-pipelines.PNG"/> </kbd>
+
+
 In the script directory, the 'train_classifier.py' file performs the machine learning pipeline that:
 
 * Loads data from the SQLite database
@@ -51,19 +55,17 @@ In the script directory, the 'train_classifier.py' file performs the machine lea
 * Outputs results on the test set
 * Exports the final model as a pickle file
 
-<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/model-pipelines.PNG"/> </kbd>
-
 - To run ML pipeline that trains classifier and saves <br>
     ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
 
 ## 4. Flask Web App
-We repurpose a web app where an emergency worker can input a new message and ten get classification results in several categories. The app also outputs a visual of how the machine learning model made the classification. 
+We repurpose a web app template from Udacity in which an emergency worker can input a new message and ten get classification results in several categories. The app also outputs a visual of how the machine learning model made the latest classification of the text entered by the user. 
 In addition to flask, the web app template that also uses html, css, javascript and Plotly visualizations. The model's classification decision rely on the LIME library.
 
 > LIME (local interpretable model-agnostic explanations) is a package for explaining the predictions made by machine learning algorithms. 
 > Lime supports explanations for individual predictions from a wide range of classifiers, and support for scikit-learn is built in.
 
-reference :
+LIME reference :
 * https://lime-ml.readthedocs.io/en/latest/ <br>
 * https://christophm.github.io/interpretable-ml-book/lime.html <br>
 
