@@ -18,7 +18,7 @@
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/dataset-1.PNG"/> </kbd>
 
- If we look at the dataset once tranformed using the dimension reduction technique latent semantic analysis (LSA) we see the following messages segregated by color on two dismensions: 
+ If we look at the dataset once tranformed using the dimension reduction technique latent semantic analysis (LSA) we see the following messages segregated by color on two dimensions: 
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/dataset-lsa.PNG"/> </kbd>
 
@@ -32,9 +32,9 @@ In the script directory, the 'process_data.py' file perfoms the data cleaning pi
 * Loads the messages and categories datasets
 * Merges the two datasets
 * Cleans the data
-* Stores it in a SQLite database
+* Stores it in a SQLite database <br>
 
-- To run ETL pipeline that cleans data and stores in database <br>
+To run ETL pipeline that cleans data and stores in database <br>
     ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
 
 ## 3. Machine Learning Text Classifier Pipeline
@@ -55,7 +55,7 @@ In the script directory, the 'train_classifier.py' file performs the machine lea
 * Outputs results on the test set
 * Exports the final model as a pickle file
 
-- To run ML pipeline that trains classifier and saves <br>
+To run ML pipeline that trains classifier and saves <br>
     ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
 
 ## 4. Flask Web App
@@ -69,8 +69,8 @@ LIME reference :
 * https://lime-ml.readthedocs.io/en/latest/ <br>
 * https://christophm.github.io/interpretable-ml-book/lime.html <br>
 
-To start the web app locally, run the following command in the app directory and then go to http://localhost:3001 to interact with the app:
-    ```python run.py```
+To start the web app locally, run the following command in the app directory and then go to http://localhost:3001 to interact with the app <br>
+```python app/run.py```
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
 
