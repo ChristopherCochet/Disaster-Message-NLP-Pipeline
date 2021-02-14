@@ -42,7 +42,7 @@ To run ETL pipeline that cleans data and stores in database <br>
 <kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
 Refer to the following ML classifier training and tuning notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
 
-<br> Multiple NPL pipelines were tested with the best results using a lightGBM clissification model. <br> <br>
+<br> Multiple NPL pipelines were tested with the best results using a lightGBM clissification model. <br>
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/model-pipelines.PNG"/> </kbd>
 
