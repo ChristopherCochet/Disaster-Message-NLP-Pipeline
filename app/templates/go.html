@@ -22,3 +22,11 @@
     </div>
 
 {% endblock %}
+
+
+{% block lime %}
+    <h1 align="center">LIME-explained results using classifier {{ model }}</h3>
+    <div class="container">
+        {{ exp|safe }}
+    </div>}}
+{% endblock %}
