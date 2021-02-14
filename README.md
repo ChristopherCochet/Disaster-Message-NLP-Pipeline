@@ -2,7 +2,7 @@
 
 **Project description:** In this project we explore the processing and classification of disaster event related tweets so that rescue and support organizations can quickly identify which tweets might require their immediate attention and follow-up 'on-theground' action.  It includes training and deploying a machine learning pipeline that categorizes these events messages so that these messages can be appropriatelty routed to an disaster relief agency.
 
-<kbd> <img src="https://christophercochet.github.io/Disaster-Message-NLP-Pipeline/images/App-demo.gif"/> </kbd>
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/App-demo.gif"/> </kbd>
 
 
 ## 1. Disaster Response Dataset
@@ -10,7 +10,7 @@
  The data set contains real messages that were sent during disaster events.
 
  
-<kbd> <img src="https://christophercochet.github.io/Disaster-Message-NLP-Pipeline/images/dataset-lsa.PNG"/> </kbd>
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/dataset-lsa.PNG"/> </kbd>
 
 ## 2. ETL Pipeline
 
@@ -35,7 +35,7 @@ In the script directory, the 'train_classifier.py' file performs the machine lea
 * Outputs results on the test set
 * Exports the final model as a pickle file
 
-<kbd> <img src="https://christophercochet.github.io/Disaster-Message-NLP-Pipeline/images/model-pipelines.PNG"/> </kbd>
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/model-pipelines.PNG"/> </kbd>
 
 - To run ML pipeline that trains classifier and saves
     ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
@@ -47,7 +47,7 @@ In addition to flask, the web app template that also uses html, css, javascript 
 - To start the web app locally, run the following command in the app directory and then go to http://localhost:3001 to interact with the app:
     ```python run.py```
 
-<kbd> <img src="https://christophercochet.github.io/Disaster-Message-NLP-Pipeline/images/classification-result.PNG"/> </kbd>
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
 
 
 ## Resources Used for this project
