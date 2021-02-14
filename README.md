@@ -1,8 +1,13 @@
 # Disaster Response Pipeline Project
 
-**Project description:** In this project we explore the processing and classification of disaster event related tweets so that rescue and support organizations can quickly identify which tweets might require their immediate attention and follow-up 'on-theground' action.  It includes training and deploying a machine learning pipeline that categorizes these events messages so that these messages can be appropriatelty routed to an disaster relief agency.
 
->> 'We have a lot of problem at Delma 75 Avenue Albert Jode, those people need water and food.'
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/project-overview.PNG"/> </kbd>
+
+
+**Project description:** In this project we explore the processing and classification of disaster event related tweets so that rescue and support organizations can quickly identify which tweets might require their immediate attention and follow-up 'on-theground' action.  It includes training and deploying a machine learning pipeline that categorizes these events messages so that these messages can be appropriatelty routed to an disaster relief agency.<br>
+
+> 'We have a lot of problem at Delma 75 Avenue Albert Jode, those people need water and food.' <br><br>
+
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/App-demo.gif"/> </kbd>
 
@@ -19,8 +24,8 @@
 
 ## 2. ETL Pipeline
 
-<kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>>
-Refer to the following notebook [here](https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/notebooks/ETL%20Pipeline%20Preparation.ipynb)
+<kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
+Refer to the following ETL notebook [here](https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/notebooks/ETL%20Pipeline%20Preparation.ipynb)
 
 In the script directory, the 'process_data.py' file perfoms the data cleaning pipeline that:
 
@@ -34,8 +39,8 @@ In the script directory, the 'process_data.py' file perfoms the data cleaning pi
 
 ## 3. Machine Learning Text Classifier Pipeline
 
-<kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>>
-Refer to the following notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
+<kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
+Refer to the following ML classifier training and tuning notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
 
 In the script directory, the 'train_classifier.py' file performs the machine learning pipeline that:
 
@@ -60,9 +65,9 @@ In addition to flask, the web app template that also uses html, css, javascript 
 
 reference :
 * https://lime-ml.readthedocs.io/en/latest/ <br>
-* https://christophm.github.io/interpretable-ml-book/lime.html
+* https://christophm.github.io/interpretable-ml-book/lime.html <br>
 
-- To start the web app locally, run the following command in the app directory and then go to http://localhost:3001 to interact with the app:
+To start the web app locally, run the following command in the app directory and then go to http://localhost:3001 to interact with the app:
     ```python run.py```
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
