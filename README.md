@@ -42,7 +42,7 @@ To run ETL pipeline that cleans data and stores in database <br>
 <kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
 Refer to the following ML classifier training and tuning notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
 
-Multiple NPL pipelines were tested with the best results using a lightGBM clissification model. 
+Multiple NPL pipelines were tested with the best results using a lightGBM clissification model.  <br>
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/model-pipelines.PNG"/> </kbd>
 
 
@@ -75,7 +75,7 @@ To start the web app locally, run the following command in the app directory and
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
 
 
-## Resources Used for this project
+## Resources Used for This Project
 * Udacity Data Science Nanodegree: [here](https://www.udacity.com/course/data-scientist-nanodegree--nd025) <br>
 * Build a LIME explainer dashboard with the fewest lines of code: [here](https://towardsdatascience.com/build-a-lime-explainer-dashboard-with-the-fewest-lines-of-code-bfe12e4592d4) <br>
 * How to solve 90% of NLP problems: a step-by-step guide: [here](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e) <br>
