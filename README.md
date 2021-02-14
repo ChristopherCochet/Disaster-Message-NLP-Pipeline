@@ -14,11 +14,11 @@
 
 ## 1. Disaster Response Dataset
 
- The data set contains 26,248 real messages that were sent during disaster events. These messages are classified as either 'direct', 'social' or 'news' and those are the labesl we will use to train the nlp model.
+ The data set contains 26,248 real messages that were sent during disaster events. These messages are classified as either **'direct'**, **'social'** or **'news'** and those are the labels we will use to train the nlp model.
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/dataset-1.PNG"/> </kbd>
 
- If we look at the dataset once tranformed using the dimension reduction technique latent semantic analysis (LSA) we see the following: 
+ If we look at the dataset once tranformed using the dimension reduction technique latent semantic analysis (LSA) we see the following messages segregated by color on two dismensions: 
 
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/dataset-lsa.PNG"/> </kbd>
 
