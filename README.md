@@ -76,10 +76,25 @@ To start the web app locally, run the following command in the app directory and
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
 
 
+## 4. Build a Docker Image of the Web App and Deploy it to Azure
+
+Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container: [here](https://towardsdatascience.com/deploy-machine-learning-pipeline-on-cloud-using-docker-container-bec64458dc01) 
+
+* Create a docker file and a docker image of the flask web app
+* Create an Azure Resource
+* Create a Container Registry
+* Select Subscription, Resource group and Registry name
+* Click on Create a Resource
+* Create an Azure Web App 
+* Link your ACR image that you pushed into your app
+* Deploy your web app !
+
+
 ## Resources Used for This Project
 * Udacity Data Science Nanodegree: [here](https://www.udacity.com/course/data-scientist-nanodegree--nd025) <br>
 * Build a LIME explainer dashboard with the fewest lines of code: [here](https://towardsdatascience.com/build-a-lime-explainer-dashboard-with-the-fewest-lines-of-code-bfe12e4592d4) <br>
 * How to solve 90% of NLP problems: a step-by-step guide: [here](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e) <br>
+
 
 
 
