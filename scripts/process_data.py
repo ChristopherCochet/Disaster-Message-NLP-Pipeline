@@ -4,9 +4,20 @@ from sqlalchemy import create_engine
 
 
 def extract_val(string):
+    '''
+    extract_val - helper funtion to process a string with dashes
+    input: the string to be processed
+    output: first eleemnet of the string returned in the form of an int  
+    '''
     return int(string.split('-')[1])
 
 def load_data(messages_filepath, categories_filepath):
+    '''
+    load_data - reads the raw csv files and load these in dataframes and merges these
+    input: two csv files and tyheir paths : message csv and catgeories csv 
+    output: merge dataframe
+    '''
+
     print("load_data - loading data files {} {}".format(messages_filepath, categories_filepath))
     messages_df = pd.read_csv(messages_filepath)
     categories_df = pd.read_csv(categories_filepath)
@@ -28,26 +39,44 @@ def load_data(messages_filepath, categories_filepath):
 
 
 def merge_data(df1, df2):
-    print("merge_clean_data - dataframe {} {}".format(df1.head(), df2.head()))
+    '''
+    merge_data - inner join of two dataframes
+    input: two dataframes
+    output: teo dataframes inner joined on the id index  
+    '''    
+    print("merge_clean_data - dataframe {} {}".format(df1.shape, df2.shape))
+    
+    # Merge dataframes
     df = pd.merge(df1,df2, how = 'inner' , on = 'id')
+    
+    # Binarize
+    mask = (df['related'] == 2)
+    df.loc[mask, 'related'] = 1
+    
+    # Remove duplicates
     df.drop_duplicates(inplace = True)    
 
     return df
 
 
 def save_data(df, database_filename):
+    '''
+    save_data - saves a dataframe to a sql lite db file and table
+    input: dataframe and the sql lite db file
+    output: N/A
+    '''        
     print("save_data - write dataframe to database {}".format(database_filename))
     engine = create_engine('sqlite:///'+ database_filename)
-    df.to_sql('messages', engine, index=False)
+    df.to_sql('messages', engine, index=False, if_exists='replace')
 
     # Check Connection and table
     check_query_df = pd.read_sql_query("SELECT * FROM messages", con = engine).head()
-    print("save_data - checking database access and table messages {}".format(check_query_df))    
+    print("save_data - checking database access and table messages {}".format(check_query_df.shape))    
 
 
 def main():
 #   To run ETL pipeline that cleans data and stores in database
-#       `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`    
+#       `python scripts/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`    
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]

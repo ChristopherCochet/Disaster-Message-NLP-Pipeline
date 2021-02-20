@@ -12,7 +12,7 @@ from sklearn.decomposition import PCA, TruncatedSVD
 
 from flask import Flask
 from flask import render_template, request, jsonify
-from plotly.graph_objects import Scatter
+from plotly.graph_objects import Scatter, Bar
 from sqlalchemy import create_engine
 from lime import lime_text
 from lime.lime_text import LimeTextExplainer 
@@ -64,14 +64,72 @@ df_lsa['Message'] = df_lsa['Message'].str.replace('.','<br>')
 @app.route('/')
 @app.route('/index')
 def index():
+    col = df.columns[4:].to_list()
+    categories_counts = df[col].sum()
+    categories_names = list(categories_counts.index)
+
+    # create visuals
+    graphs = [
+        {
+            'data': [
+                Bar(
+                    x=categories_names,
+                    y=categories_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories"
+                }
+            }
+        }
+    ]
+
+    genre_counts = df.groupby('genre').count()['message']
+    genre_names = list(genre_counts.index)
     
+    # create visuals
+    graphs += [
+        {
+            'data': [
+                Bar(
+                    x=genre_names,
+                    y=genre_counts
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Genres',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Genre"
+                }
+            }
+        }
+    ]
+    
+    # encode plotly graphs in JSON
+    # ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
+    # graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
+    
+    # # render web page with plotly graphs
+    # render_template('master.html', ids=ids, graphJSON=graphJSON)
+
+
     # extract data needed for visuals
     df_lsa_direct = df_lsa[df_lsa['Labels'] == 'direct']
     df_lsa_social = df_lsa[df_lsa['Labels'] == 'social']
     df_lsa_news = df_lsa[df_lsa['Labels'] == 'news']
     
     # create visuals
-    graphs = [
+    graphs += [
         {
             'data': [
                 Scatter(
@@ -146,7 +204,9 @@ def go():
     classification_results = dict(zip(df.columns[4:], classification_labels))
 
     # set-up Lime
-    limeexplainer = LimeTextExplainer(class_names = model.classes_)
+    classes = df.columns[4:].to_list()
+    print("classes = {}".format(classes))
+    limeexplainer = LimeTextExplainer(class_names = classes)
     exp = limeexplainer.explain_instance(query, model.predict_proba, num_features = 10, top_labels=3)     
 
     # This will render the go.html Please see that file. 

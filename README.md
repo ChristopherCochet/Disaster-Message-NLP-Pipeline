@@ -8,7 +8,6 @@
 
 > 'We have a lot of problem at Delma 75 Avenue Albert Jode, those people need water and food.' <br><br>
 
-
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/App-demo.gif"/> </kbd>
 
 
@@ -35,7 +34,7 @@ In the script directory, the 'process_data.py' file perfoms the data cleaning pi
 * Stores it in a SQLite database <br>
 
 To run ETL pipeline that cleans data and stores in database <br>
-    ```python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
+    ```python scripts/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db```
 
 ## 3. Machine Learning Text Classifier Pipeline
 
@@ -57,9 +56,19 @@ In the script directory, the 'train_classifier.py' file performs the machine lea
 * Exports the final model as a pickle file
 
 To run ML pipeline that trains classifier and saves <br>
-    ```python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
+    ```python scripts/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
 
-## 4. Flask Web App
+
+## 4. Model Evaluation
+The best NLP pipeline and model tested was based on a Multioutput ClassifierChain classifier and a lightGBM tree algorithm .
+
+> A multi-label model that arranges binary classifiers into a chain.
+> Each model makes a prediction in the order specified by the chain using all of the available features provided to the model plus the predictions of models that are earlier in the chain.<br>
+
+
+<kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-report.PNG"/> </kbd>
+
+## 5. Flask Web App
 We repurpose a web app template from Udacity in which an emergency worker can input a new message and ten get classification results in several categories. The app also outputs a visual of how the machine learning model made the latest classification of the text entered by the user. 
 In addition to flask, the web app template that also uses html, css, javascript and Plotly visualizations. The model's classification decision rely on the LIME library.
 
@@ -76,7 +85,7 @@ To start the web app locally, run the following command in the app directory and
 <kbd> <img src="https://github.com/ChristopherCochet/Disaster-Message-NLP-Pipeline/blob/master/images/classification-result.PNG"/> </kbd>
 
 
-## 4. Build a Docker Image of the Web App and Deploy it to Azure
+## 6. Build a Docker Image of the Web App and Deploy it to Azure
 
 Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container: [here](https://towardsdatascience.com/deploy-machine-learning-pipeline-on-cloud-using-docker-container-bec64458dc01) 
 
@@ -89,6 +98,39 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
 * Link your ACR image that you pushed into your app
 * Deploy your web app !
 
+## 7. Project Structure
+
+
+    |   directory_struct.txt
+    |   Dockerfile
+    |   README.md
+    |   requirements.txt
+    |   
+    +---app  ```Flask Web app code```
+    |   |   run.py
+    |   |   run.py.old
+    |   |   
+    |   +---templates
+    |   |       go.html
+    |   |       master.html
+    |           
+    +---data  ```Disaster Message data source and db```
+    |       DisasterResponse.db
+    |       disaster_categories.csv
+    |       disaster_messages.csv
+    |             
+    +---models  ```Trained NLP pipeline```
+    |       classifier.pkl
+    |       
+    +---notebooks  ```Notebook used to explore and model```
+    |   |   ETL Pipeline Preparation.ipynb
+    |   |   ML Pipeline Preparation.ipynb
+    |      
+    |           
+    \---scripts  ```Python scripts to process the data and run the training of the NLP pipeline```
+            process_data.py
+            train_classifier.py
+        
 
 ## Resources Used for This Project
 * Udacity Data Science Nanodegree: [here](https://www.udacity.com/course/data-scientist-nanodegree--nd025) <br>

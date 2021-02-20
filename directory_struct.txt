@@ -1,0 +1,68 @@
+Folder PATH listing for volume DATA
+Volume serial number is 00000079 6E98:6AE7
+E:.
+|   directory_struct.txt
+|   Dockerfile
+|   README.md
+|   requirements.txt
+|   
++---.ipynb_checkpoints
+|       ETL Pipeline Preparation-checkpoint.ipynb
+|       ML Pipeline Preparation Clean-checkpoint.ipynb
+|       ML Pipeline Preparation-checkpoint.ipynb
+|       
++---app
+|   |   run.py
+|   |   run.py.old
+|   |   
+|   +---templates
+|   |       go.html
+|   |       master.html
+|   |       
+|   \---__pycache__
+|           run.cpython-36.pyc
+|           
++---data
+|       DisasterResponse.db
+|       disaster_categories.csv
+|       disaster_messages.csv
+|       
++---docker
+|       docker-cmd.txt
+|       
++---images
+|       App-demo.gif
+|       Azure-CR.PNG
+|       Azure-Web-App.PNG
+|       classification-report.PNG
+|       classification-result.PNG
+|       Create-Web-App-2.PNG
+|       dataset-1.PNG
+|       dataset-lsa.PNG
+|       docker-image.PNG
+|       docker-login-azure.PNG
+|       model-pipelines.PNG
+|       project-overview.PNG
+|       Web-App-Deployment.PNG
+|       web_app_launch.PNG
+|       
++---models
+|       classifier.pkl
+|       
++---notebooks
+|   |   ETL Pipeline Preparation.ipynb
+|   |   ML Pipeline Preparation.ipynb
+|   |   
+|   +---.ipynb_checkpoints
+|   |       ETL Pipeline Preparation-checkpoint.ipynb
+|   |       ML Pipeline Preparation - Copy-checkpoint.ipynb
+|   |       ML Pipeline Preparation-checkpoint.ipynb
+|   |       Untitled-checkpoint.ipynb
+|   |       
+|   \---back-up
+|           ML Pipeline Preparation.ipynb
+|           
+\---scripts
+        process_data.py
+        train_classifier.py
+        
