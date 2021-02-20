@@ -15,7 +15,7 @@ RUN python3 -m nltk.downloader wordnet
 RUN python3 -m nltk.downloader averaged_perceptron_tagger
 
 # Expose port 
-EXPOSE 3001
+EXPOSE 8000
 
 # Run the application:
 CMD ["python", "app/run.py"]

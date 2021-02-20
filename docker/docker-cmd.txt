@@ -1,3 +1,5 @@
+ip list --format=freeze > requirements.txt
+
 docker ps -a
 docker run -d -P disaster-message
 docker build -t disaster-message .

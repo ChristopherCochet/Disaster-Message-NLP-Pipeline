@@ -111,8 +111,8 @@ def save_model(model, model_filepath):
     '''    
 
     print("save_model - model {} to {}".format(model, model_filepath)) 
-
     pickle.dump(model, open(model_filepath, 'wb'))
+
 
 
 def main():

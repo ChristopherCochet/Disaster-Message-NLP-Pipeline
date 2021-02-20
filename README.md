@@ -106,7 +106,7 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
     |   README.md
     |   requirements.txt
     |   
-    +---app  ```Flask Web app code```
+    +---app ................................. Flask Web app code
     |   |   run.py
     |   |   run.py.old
     |   |   
@@ -114,20 +114,20 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
     |   |       go.html
     |   |       master.html
     |           
-    +---data  ```Disaster Message data source and db```
+    +---data ................................ Disaster Message data source and db
     |       DisasterResponse.db
     |       disaster_categories.csv
     |       disaster_messages.csv
     |             
-    +---models  ```Trained NLP pipeline```
+    +---models ........................... Trained NLP pickle pipeline
     |       classifier.pkl
     |       
-    +---notebooks  ```Notebook used to explore and model```
+    +---notebooks ........................... Notebook used to explore and model
     |   |   ETL Pipeline Preparation.ipynb
     |   |   ML Pipeline Preparation.ipynb
     |      
     |           
-    \---scripts  ```Python scripts to process the data and run the training of the NLP pipeline```
+    \---scripts ............................. Python scripts to process the data and run the training of the NLP pipeline
             process_data.py
             train_classifier.py
         
@@ -136,6 +136,7 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
 * Udacity Data Science Nanodegree: [here](https://www.udacity.com/course/data-scientist-nanodegree--nd025) <br>
 * Build a LIME explainer dashboard with the fewest lines of code: [here](https://towardsdatascience.com/build-a-lime-explainer-dashboard-with-the-fewest-lines-of-code-bfe12e4592d4) <br>
 * How to solve 90% of NLP problems: a step-by-step guide: [here](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e) <br>
+* Migrate custom software to Azure App Service using a custom container: [here] (https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux)
 
 
 

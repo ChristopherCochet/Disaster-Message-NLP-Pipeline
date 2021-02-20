@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.filterwarnings('ignore')
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
@@ -114,14 +114,6 @@ def index():
             }
         }
     ]
-    
-    # encode plotly graphs in JSON
-    # ids = ["graph-{}".format(i) for i, _ in enumerate(graphs)]
-    # graphJSON = json.dumps(graphs, cls=plotly.utils.PlotlyJSONEncoder)
-    
-    # # render web page with plotly graphs
-    # render_template('master.html', ids=ids, graphJSON=graphJSON)
-
 
     # extract data needed for visuals
     df_lsa_direct = df_lsa[df_lsa['Labels'] == 'direct']
@@ -221,7 +213,7 @@ def go():
 
 
 def main():
-    app.run(host='localhost', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
 
 
 if __name__ == '__main__':
