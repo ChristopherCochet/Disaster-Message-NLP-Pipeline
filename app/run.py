@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 import warnings
-warnings.simplefilter(action='ignore', category=FutureWarning)
+warnings.filterwarnings('ignore')
 
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize

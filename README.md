@@ -106,7 +106,7 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
     |   README.md
     |   requirements.txt
     |   
-    +---app  ```Flask Web app code```
+    +---app ................................. Flask Web app code
     |   |   run.py
     |   |   run.py.old
     |   |   
@@ -114,20 +114,20 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
     |   |       go.html
     |   |       master.html
     |           
-    +---data  ```Disaster Message data source and db```
+    +---data ................................ Disaster Message data source and db
     |       DisasterResponse.db
     |       disaster_categories.csv
     |       disaster_messages.csv
     |             
-    +---models  ```Trained NLP pipeline```
+    +---models ........................... Trained NLP pickle pipeline
     |       classifier.pkl
     |       
-    +---notebooks  ```Notebook used to explore and model```
+    +---notebooks ........................... Notebook used to explore and model
     |   |   ETL Pipeline Preparation.ipynb
     |   |   ML Pipeline Preparation.ipynb
     |      
     |           
-    \---scripts  ```Python scripts to process the data and run the training of the NLP pipeline```
+    \---scripts ............................. Python scripts to process the data and run the training of the NLP pipeline
             process_data.py
             train_classifier.py
         
