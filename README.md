@@ -51,12 +51,12 @@ In the script directory, the 'train_classifier.py' file performs the machine lea
 * Loads data from the SQLite database
 * Splits the dataset into training and test sets
 * Builds a text processing and machine learning pipeline
-* Trains and tunes a model using a SearchCV approach
+* Trains and tunes a model using a SearchCV approach 
 * Outputs results on the test set
 * Exports the final model as a pickle file
 
 To run ML pipeline that trains classifier and saves <br>
-    ```python scripts/train_classifier.py data/DisasterResponse.db models/classifier.pkl```
+    ```python scripts/train_classifier.py data/DisasterResponse.db models/classifier.pkl```  
 
 
 ## 4. Model Evaluation
@@ -136,7 +136,7 @@ Reference: Deploy Machine Learning Pipeline on the cloud using Docker Container:
 * Udacity Data Science Nanodegree: [here](https://www.udacity.com/course/data-scientist-nanodegree--nd025) <br>
 * Build a LIME explainer dashboard with the fewest lines of code: [here](https://towardsdatascience.com/build-a-lime-explainer-dashboard-with-the-fewest-lines-of-code-bfe12e4592d4) <br>
 * How to solve 90% of NLP problems: a step-by-step guide: [here](https://blog.insightdatascience.com/how-to-solve-90-of-nlp-problems-a-step-by-step-guide-fda605278e4e) <br>
-* Migrate custom software to Azure App Service using a custom container: [here] (https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux)
+* Migrate custom software to Azure App Service using a custom container: [here](https://docs.microsoft.com/en-us/azure/app-service/tutorial-custom-container?pivots=container-linux)
 
 
 
