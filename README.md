@@ -39,7 +39,7 @@ To run ETL pipeline that cleans data and stores in database <br>
 ## 3. Machine Learning Text Classifier Pipeline
 
 <kbd> <img src="https://christophercochet.github.io/Market-Basket-Analysis/images/jupyter.png"/> </kbd>
-Refer to the following ML classifier training and tuning notebook [here](http://localhost:8888/notebooks/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
+Refer to the following ML classifier training and tuning notebook [here](https://github.com/ChristopherCochet/Disaster-Recovery-Message_Classification/notebooks/ML%20Pipeline%20Preparation.ipynb)
 
 <br> Multiple NPL pipelines were tested with the best results using a lightGBM clissification model. <br>
 
